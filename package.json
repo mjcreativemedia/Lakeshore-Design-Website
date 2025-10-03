@@ -1,0 +1,21 @@
+{
+  "name": "tailwind-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "concurrently -k \"npm:watch:css\" \"npm:serve\"",
+    "watch:css": "nodemon -L -e html,js,css --watch public --watch src --exec \"./node_modules/.bin/tailwindcss -i ./src/input.css -o ./public/assets/tailwind.css\"",
+    "serve": "./node_modules/.bin/live-server public --open",
+    "build": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./public/assets/tailwind.css --minify",
+    "deploy:gh": "rm -rf docs && mkdir -p docs && npm run build && cp -R public/* docs/ && git add -A && git commit -m \"deploy\" || true && git push origin main || true"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13"
+  }
+}

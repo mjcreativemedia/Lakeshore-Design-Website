@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand-y defaults */
+@layer base {
+  html { @apply bg-snow text-zinc-900 antialiased; }
+  body { @apply tabular-nums; } /* numbers line up */
+  /* Hairline rule utility (notch-light) */
+  hr { @apply border-0 h-px bg-hairline; }
+}
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition;
+  }
+  .btn-primary {
+    @apply bg-deep-lake text-white hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-deep-lake;
+  }
+  .btn-ghost {
+    @apply text-deep-lake hover:bg-mist;
+  }
+  .card {
+    @apply rounded-xl bg-white shadow-card ring-1 ring-hairline/60;
+  }
+  .pill {
+    @apply inline-flex items-center rounded-full border border-hairline bg-white px-3 py-1 text-xs text-zinc-700;
+  }
+}
