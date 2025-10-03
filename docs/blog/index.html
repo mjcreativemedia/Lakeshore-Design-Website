@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Lakeshore</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind output -->
+  <link rel="stylesheet" href="../assets/tailwind.css" />
+  <meta name="theme-color" content="#3552A3">
+</head>
+<body class="font-sans">
+  <header class="sticky top-0 z-50 bg-snow/80 backdrop-blur supports-[backdrop-filter]:bg-snow/60 border-b border-hairline">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex h-14 items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+<svg class="h-6 w-6 text-deep-lake" viewBox="0 0 100 100" aria-hidden="true">
+  <circle cx="50" cy="50" r="48" fill="currentColor"/>
+  <path d="M20 55 Q40 45, 60 55 T100 55"
+        fill="none"
+        stroke="white"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
+          <span class="font-tight text-lg tracking-tight">Lakeshore</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a class="hover:text-deep-lake" href="/#services">Services</a>
+          <a class="hover:text-deep-lake" href="/#work">Work</a>
+          <a class="hover:text-deep-lake" href="/#approach">Approach</a>
+          <a class="hover:text-deep-lake text-deep-lake" href="/blog/">Blog</a>
+          <a class="hover:text-deep-lake" href="/#contact">Contact</a>
+          <a class="btn btn-primary ml-2" href="/#contact">Start a project</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden btn btn-ghost px-3" aria-label="Open menu">Menu</button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-hairline">
+      <nav class="mx-auto max-w-6xl px-4 py-2 grid gap-1 text-sm">
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#services">Services</a>
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#work">Work</a>
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#approach">Approach</a>
+        <a class="px-2 py-2 rounded bg-mist text-deep-lake" href="/blog/">Blog</a>
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#contact">Contact</a>
+        <a class="btn btn-primary mt-1 w-full" href="/#contact">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-mist via-white/70 to-snow"></div>
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_40%_at_50%_0%,rgba(53,82,163,0.18)_0%,rgba(53,82,163,0)_60%)]"></div>
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.0)_0%,rgba(255,255,255,0.4)_8%,rgba(255,255,255,0.0)_16%)] opacity-20"></div>
+      <div class="mx-auto max-w-4xl px-4 py-16 md:py-24">
+        <p class="pill">Lakeshore Notebook</p>
+        <h1 class="mt-6 font-tight text-4xl md:text-5xl tracking-tight">Ideas from the shop floor.</h1>
+        <p class="mt-5 text-lg text-zinc-700 max-w-2xl">Deep dives on AI systems, process, and the craft decisions that keep software steady. New posts drop as we ship notable work.</p>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-4 pb-20">
+      <div class="flex flex-col gap-16 lg:flex-row lg:items-start">
+        <div class="flex-1">
+          <h2 class="font-tight text-2xl tracking-tight">Latest writing</h2>
+          <div class="mt-8 grid gap-8 sm:grid-cols-2">
+            <article class="card p-6 flex flex-col gap-4">
+              <div class="text-xs uppercase tracking-wide text-zinc-500">Case Study · Feb 2025</div>
+              <h3 class="font-tight text-xl tracking-tight"><a class="hover:text-deep-lake" href="./post-template.html">Shipping a resilient retrieval pipeline in 10 days</a></h3>
+              <p class="text-sm text-zinc-600">How we stabilized a noisy product feed and unlocked reliable context for a multi-market assistant.</p>
+              <a class="text-sm font-medium text-deep-lake hover:underline" href="./post-template.html">Read more →</a>
+            </article>
+            <article class="card p-6 flex flex-col gap-4">
+              <div class="text-xs uppercase tracking-wide text-zinc-500">Playbook · Jan 2025</div>
+              <h3 class="font-tight text-xl tracking-tight"><a class="hover:text-deep-lake" href="./post-template.html">Instrumentation that keeps AI features honest</a></h3>
+              <p class="text-sm text-zinc-600">A practical checklist for measuring LLM performance in production without slowing your roadmap.</p>
+              <a class="text-sm font-medium text-deep-lake hover:underline" href="./post-template.html">Read more →</a>
+            </article>
+            <article class="card p-6 flex flex-col gap-4">
+              <div class="text-xs uppercase tracking-wide text-zinc-500">Notes · Dec 2024</div>
+              <h3 class="font-tight text-xl tracking-tight"><a class="hover:text-deep-lake" href="./post-template.html">Designing editorial tooling for non-technical teams</a></h3>
+              <p class="text-sm text-zinc-600">We turned a days-long publishing process into minutes with simple guardrails and fast feedback.</p>
+              <a class="text-sm font-medium text-deep-lake hover:underline" href="./post-template.html">Read more →</a>
+            </article>
+            <article class="card p-6 flex flex-col gap-4">
+              <div class="text-xs uppercase tracking-wide text-zinc-500">Guide · Nov 2024</div>
+              <h3 class="font-tight text-xl tracking-tight"><a class="hover:text-deep-lake" href="./post-template.html">What to measure before automating support</a></h3>
+              <p class="text-sm text-zinc-600">Benchmarks, baselines, and the qualitative insights that catch failure modes early.</p>
+              <a class="text-sm font-medium text-deep-lake hover:underline" href="./post-template.html">Read more →</a>
+            </article>
+          </div>
+        </div>
+        <aside class="lg:w-80 lg:sticky lg:top-24">
+          <div class="card p-6">
+            <h2 class="font-tight text-lg tracking-tight">Get the brief</h2>
+            <p class="mt-2 text-sm text-zinc-600">A lightweight update when we publish something new. No spam, just the highlights.</p>
+            <form class="mt-4 grid gap-3" action="#" method="post">
+              <label class="text-xs font-medium uppercase tracking-wide text-zinc-500" for="email">Email</label>
+              <input class="rounded-lg border border-hairline bg-white px-3 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-deep-lake" type="email" id="email" name="email" placeholder="you@example.com" required />
+              <button type="submit" class="btn btn-primary">Notify me</button>
+            </form>
+          </div>
+          <div class="mt-6 card p-6">
+            <h2 class="font-tight text-lg tracking-tight">Popular topics</h2>
+            <ul class="mt-3 flex flex-wrap gap-2">
+              <li><a class="pill hover:border-deep-lake hover:text-deep-lake" href="./post-template.html">AI systems</a></li>
+              <li><a class="pill hover:border-deep-lake hover:text-deep-lake" href="./post-template.html">Product ops</a></li>
+              <li><a class="pill hover:border-deep-lake hover:text-deep-lake" href="./post-template.html">Data pipelines</a></li>
+              <li><a class="pill hover:border-deep-lake hover:text-deep-lake" href="./post-template.html">Process</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <section id="contact" class="mx-auto max-w-6xl px-4 pb-20">
+    <div class="card p-8 md:flex md:items-center md:justify-between md:gap-10">
+      <div>
+        <p class="pill">Need a partner?</p>
+        <h2 class="mt-4 font-tight text-2xl tracking-tight">Have a hard problem or a high bar?</h2>
+        <p class="mt-1 text-sm text-zinc-700">Let’s make it simple.</p>
+      </div>
+      <a href="mailto:hello@lakeshore.design" class="btn btn-primary">hello@lakeshore.design</a>
+    </div>
+    <p class="mt-6 text-xs text-zinc-500">© Lakeshore. Measured software. Consistent by design.</p>
+  </section>
+
+  <script>
+    const b = document.getElementById('menuBtn');
+    const n = document.getElementById('mobileNav');
+    b?.addEventListener('click', () => n.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

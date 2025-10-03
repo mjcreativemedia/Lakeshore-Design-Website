@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post title — Lakeshore Blog</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind output -->
+  <link rel="stylesheet" href="../assets/tailwind.css" />
+  <meta name="theme-color" content="#3552A3">
+</head>
+<body class="font-sans">
+  <header class="sticky top-0 z-50 bg-snow/80 backdrop-blur supports-[backdrop-filter]:bg-snow/60 border-b border-hairline">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex h-14 items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+<svg class="h-6 w-6 text-deep-lake" viewBox="0 0 100 100" aria-hidden="true">
+  <circle cx="50" cy="50" r="48" fill="currentColor"/>
+  <path d="M20 55 Q40 45, 60 55 T100 55"
+        fill="none"
+        stroke="white"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
+          <span class="font-tight text-lg tracking-tight">Lakeshore</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a class="hover:text-deep-lake" href="/#services">Services</a>
+          <a class="hover:text-deep-lake" href="/#work">Work</a>
+          <a class="hover:text-deep-lake" href="/#approach">Approach</a>
+          <a class="hover:text-deep-lake text-deep-lake" href="/blog/">Blog</a>
+          <a class="hover:text-deep-lake" href="/#contact">Contact</a>
+          <a class="btn btn-primary ml-2" href="/#contact">Start a project</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden btn btn-ghost px-3" aria-label="Open menu">Menu</button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-hairline">
+      <nav class="mx-auto max-w-6xl px-4 py-2 grid gap-1 text-sm">
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#services">Services</a>
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#work">Work</a>
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#approach">Approach</a>
+        <a class="px-2 py-2 rounded bg-mist text-deep-lake" href="/blog/">Blog</a>
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#contact">Contact</a>
+        <a class="btn btn-primary mt-1 w-full" href="/#contact">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="pb-20">
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-mist via-white/70 to-snow"></div>
+        <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_40%_at_50%_0%,rgba(53,82,163,0.18)_0%,rgba(53,82,163,0)_60%)]"></div>
+        <div class="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.0)_0%,rgba(255,255,255,0.4)_8%,rgba(255,255,255,0.0)_16%)] opacity-20"></div>
+        <div class="mx-auto max-w-3xl px-4 py-16 md:py-24">
+          <a href="/blog/" class="pill hover:border-deep-lake hover:text-deep-lake">← Back to all posts</a>
+          <p class="mt-6 text-sm uppercase tracking-wide text-zinc-500">Case Study · Feb 2025</p>
+          <h1 class="mt-3 font-tight text-4xl md:text-5xl tracking-tight">Shipping a resilient retrieval pipeline in 10 days</h1>
+          <p class="mt-4 text-base text-zinc-600">By Alex Monroe · 8 minute read</p>
+        </div>
+      </section>
+
+      <div class="mx-auto max-w-3xl px-4">
+        <figure class="card overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80" alt="Screens showing graphs and dashboards" class="h-72 w-full object-cover" />
+          <figcaption class="px-6 py-3 text-xs text-zinc-500">Telemetry dashboard used to watch retriever health in real time.</figcaption>
+        </figure>
+
+        <div class="mt-10 space-y-8 text-base leading-relaxed text-zinc-700">
+          <p class="text-lg text-zinc-700">When a global retailer asked for a multilingual assistant in under two weeks, we knew the retrieval layer would make or break the launch. Here’s how we stabilized a noisy product feed and kept hallucinations at bay.</p>
+
+          <div class="space-y-4">
+            <h2 class="font-tight text-2xl tracking-tight text-zinc-900">Start with the failure budget</h2>
+            <p>We sat down with merchandising and support leads to map the worst-case scenarios. That produced a simple rule: every response needed at least two corroborating documents, and stale inventory was unacceptable. That clarity shaped everything downstream.</p>
+          </div>
+
+          <blockquote class="border-l-4 border-deep-lake/60 pl-4 italic text-zinc-600">“Design the guardrails early and you can move faster later. The lack of surprises is the win.”</blockquote>
+
+          <div class="space-y-4">
+            <h3 class="font-tight text-xl tracking-tight text-zinc-900">Taming the feed</h3>
+            <p>We wrapped the upstream feed in a reconciliation job that compared product deltas against a normalized warehouse. Anything suspicious landed in a review queue with a one-click correction workflow.</p>
+            <ul class="list-disc pl-5">
+              <li>Automatic detection of duplicate SKUs and conflicting metadata.</li>
+              <li>Time-to-live tags on every document with a background revalidation job.</li>
+              <li>Snapshot testing against a golden set of user journeys.</li>
+            </ul>
+            <p>The result was a retriever that aged gracefully, even when upstream systems wobbled.</p>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="font-tight text-xl tracking-tight text-zinc-900">Eval before you ship</h3>
+            <p>Before launch we ran hourly evals with production prompts. The dashboard above surfaced any regression within minutes. When legal updated policies mid-launch, we swapped in a new policy pack and watched the scores settle in real time.</p>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="font-tight text-2xl tracking-tight text-zinc-900">What it unlocked</h2>
+            <p>Day one support tickets dropped by 35%. More importantly, the merchandising team trusted the assistant to stay on-script. With the groundwork in place we layered on automated translation and spec generation in the second week.</p>
+          </div>
+
+          <div class="mt-10 rounded-xl bg-mist px-6 py-5 text-sm text-zinc-700">
+            <h2 class="font-tight text-lg tracking-tight text-zinc-900">Key takeaways</h2>
+            <ol class="mt-3 list-decimal pl-5 space-y-2">
+              <li>Codify failure budgets with the business before you architect anything.</li>
+              <li>Stabilize upstream data with reconciliation jobs and fast correction loops.</li>
+              <li>Invest in evals and observability so changes stay safe.</li>
+            </ol>
+          </div>
+
+          <p>Want to go deeper? Drop us a note at <a class="text-deep-lake underline" href="mailto:hello@lakeshore.design">hello@lakeshore.design</a>.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <section id="contact" class="mx-auto max-w-6xl px-4 pb-20">
+    <div class="card p-8 md:flex md:items-center md:justify-between md:gap-10">
+      <div>
+        <p class="pill">Need a partner?</p>
+        <h2 class="mt-4 font-tight text-2xl tracking-tight">Have a hard problem or a high bar?</h2>
+        <p class="mt-1 text-sm text-zinc-700">Let’s make it simple.</p>
+      </div>
+      <a href="mailto:hello@lakeshore.design" class="btn btn-primary">hello@lakeshore.design</a>
+    </div>
+    <p class="mt-6 text-xs text-zinc-500">© Lakeshore. Measured software. Consistent by design.</p>
+  </section>
+
+  <script>
+    const b = document.getElementById('menuBtn');
+    const n = document.getElementById('mobileNav');
+    b?.addEventListener('click', () => n.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
