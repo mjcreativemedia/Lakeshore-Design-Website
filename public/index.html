@@ -20,13 +20,17 @@
   <header class="sticky top-0 z-50 bg-snow/80 backdrop-blur supports-[backdrop-filter]:bg-snow/60 border-b border-hairline">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex h-14 items-center justify-between">
-        <a href="/" class="flex items-center gap-2">
+        <a href="/" class="flex items-center gap-1">
           <span class="font-tight text-lg tracking-tight">Lakeshore</span>
-          <!-- Brand mark (inherits color from the text color via currentColor) -->
-          <svg class="h-5 w-5 text-deep-lake" viewBox="0 0 100 100" aria-hidden="true">
-            <!-- Filled circle uses currentColor so we can theme via Tailwind -->
-            <circle cx="50" cy="50" r="48" fill="currentColor"/>
-            <!-- Wave cutout (stays white for contrast) -->
+          <!-- Brand mark with gradient fill -->
+          <svg class="h-4 w-4" viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <linearGradient id="brandMarkGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+                <stop offset="0%" stop-color="#111111" />
+                <stop offset="100%" stop-color="#3552A3" />
+              </linearGradient>
+            </defs>
+            <circle cx="50" cy="50" r="48" fill="url(#brandMarkGradient)" />
             <path d="M20 55 Q40 45, 60 55 T100 55"
                   fill="none"
                   stroke="white"
