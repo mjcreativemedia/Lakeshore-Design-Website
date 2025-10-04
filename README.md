@@ -23,3 +23,11 @@ public/
   index.html
   assets/tailwind.css    # generated
 ```
+
+## External image assets
+
+To comply with the no-binary-assets policy, portfolio thumbnails that previously lived in
+`public/assets/images/` are now delivered from [placehold.co](https://placehold.co). The
+`index.html` source and the static copies generated in `public/` and `docs/` reference those
+hosted URLs directly, so no additional download step is required when running
+`npm run build` or `npm run deploy:gh`.
