@@ -9,10 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind output -->
   <link rel="stylesheet" href="./assets/tailwind.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <meta name="theme-color" content="#3552A3">
 </head>
 <body class="font-sans">
@@ -21,10 +21,10 @@
   <header class="sticky top-0 z-50 bg-snow/80 backdrop-blur supports-[backdrop-filter]:bg-snow/60 border-b border-hairline">
     <div class="mx-auto max-w-6xl px-4">
       <div class="flex h-14 items-center justify-between">
-        <a href="#" class="flex items-center gap-2">
+        <a href="/" class="flex items-center gap-2">
           <span class="font-tight text-lg tracking-tight">Lakeshore</span>
           <!-- Brand mark (inherits color from the text color via currentColor) -->
-          <svg class="h-5 w-5 text-deep-lake" viewBox="0 0 100 100" aria-hidden="true">
+          <svg class="h-4 w-4 text-deep-lake" viewBox="0 0 100 100" aria-hidden="true">
             <!-- Filled circle uses currentColor so we can theme via Tailwind -->
             <circle cx="50" cy="50" r="48" fill="currentColor"/>
             <!-- Wave cutout (stays white for contrast) -->
@@ -72,7 +72,7 @@
       <div class="max-w-prose">
         <p class="pill">Made in Chicago</p>
         <h1 class="mt-6 font-tight text-4xl md:text-5xl tracking-tight">
-          Engineering-grade systems for AI and the web.
+          Engineering-grade systems for AI and the web
         </h1>
         <p class="mt-5 text-lg text-zinc-700 max-w-prose">
           Measured software. Consistent by design. Built to scale without drift.
@@ -232,27 +232,6 @@
         <p class="mt-3 text-sm"><span class="pill">Days → minutes</span></p>
       </article>
     </div>
-  </section>
-
-  <hr class="my-12 md:my-16"/>
-
-  <!-- Differentiators -->
-  <section class="mx-auto max-w-6xl px-4">
-    <h2 class="font-tight text-2xl md:text-3xl tracking-tight">Why Lakeshore</h2>
-    <ul class="mt-6 grid gap-4 md:grid-cols-3 text-sm">
-      <li class="card p-5">
-        <h3 class="font-medium">System design</h3>
-        <p class="mt-1 text-zinc-700">Tokens → components → repos. Drift stays at zero.</p>
-      </li>
-      <li class="card p-5">
-        <h3 class="font-medium">Performance discipline</h3>
-        <p class="mt-1 text-zinc-700">Core Web Vitals, regression checks, tabular metrics.</p>
-      </li>
-      <li class="card p-5">
-        <h3 class="font-medium">Calm delivery</h3>
-        <p class="mt-1 text-zinc-700">Clear scope, clean handoffs, documentation.</p>
-      </li>
-    </ul>
   </section>
 
   <hr class="my-12 md:my-16"/>
