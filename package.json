@@ -8,7 +8,7 @@
     "watch:css": "nodemon -L -e html,js,css --watch public --watch src --exec \"./node_modules/.bin/tailwindcss -i ./src/input.css -o ./public/assets/tailwind.css\"",
     "serve": "./node_modules/.bin/live-server public --open",
     "build": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./public/assets/tailwind.css --minify",
-    "deploy:gh": "rm -rf docs && mkdir -p docs && npm run build && cp -R public/* docs/ && cp public/index.html ./index.html && rm -rf assets && mkdir -p assets && cp public/assets/tailwind.css assets/tailwind.css && cp public/assets/favicon.svg assets/favicon.svg && rm -rf local && cp -R public/local ./local && git add -A && git commit -m \"deploy\" || true && git push origin main || true"
+    "deploy:gh": "rm -rf docs && mkdir -p docs && npm run build && cp -R public/* docs/ && cp public/index.html ./index.html && rm -rf assets && mkdir -p assets && cp -R public/assets/. assets/ && rm -rf local && cp -R public/local ./local && git add -A && git commit -m \"deploy\" || true && git push origin main || true"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
