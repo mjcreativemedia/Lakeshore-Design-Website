@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lakeshore Local — Private beta for on-prem builds</title>
+  <meta name="description" content="Join the Lakeshore Local beta to run our measured build systems on your own hardware with direct engineering support." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind output -->
+  <link rel="stylesheet" href="../assets/tailwind.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <meta name="theme-color" content="#3552A3">
+</head>
+<body class="font-sans">
+  <header class="sticky top-0 z-50 bg-snow/80 backdrop-blur supports-[backdrop-filter]:bg-snow/60 border-b border-hairline">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="flex h-14 items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <span class="font-tight text-lg tracking-tight">Lakeshore</span>
+          <svg class="h-4 w-4 text-deep-lake" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="currentColor"/>
+            <path d="M20 55 Q40 45, 60 55 T100 55"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a class="hover:text-deep-lake" href="/blog/">Blog</a>
+          <a class="hover:text-deep-lake" href="/#contact">Contact</a>
+          <a class="btn btn-primary ml-2" href="/#contact">Start a project</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden btn btn-ghost px-3" aria-label="Open menu">Menu</button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-hairline">
+      <nav class="mx-auto max-w-6xl px-4 py-2 grid gap-1 text-sm">
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/blog/">Blog</a>
+        <a class="px-2 py-2 rounded hover:bg-mist" href="/#contact">Contact</a>
+        <a class="btn btn-primary mt-1 w-full" href="/#contact">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-mist via-white/70 to-snow"></div>
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_40%_at_50%_0%,rgba(53,82,163,0.18)_0%,rgba(53,82,163,0)_60%)]"></div>
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(120deg,rgba(255,255,255,0.0)_0%,rgba(255,255,255,0.4)_8%,rgba(255,255,255,0.0)_16%)] opacity-20"></div>
+      <div class="mx-auto max-w-4xl px-4 pt-20 pb-24 md:pt-28 md:pb-28">
+        <div class="max-w-2xl">
+          <p class="pill">Introducing Lakeshore Local</p>
+          <h1 class="mt-6 font-tight text-4xl md:text-5xl tracking-tight">Run our measured systems on hardware you control.</h1>
+          <p class="mt-5 text-lg text-zinc-700">The Lakeshore Local beta pairs hardened build tooling, observability, and human-in-the-loop QA so teams can ship sensitive AI and web features without leaving their network.</p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a class="btn btn-primary" href="#join">Request beta access</a>
+            <a class="btn btn-ghost" href="/#contact">Talk with the team</a>
+          </div>
+        </div>
+        <div class="mt-12">
+          <h2 class="text-sm font-semibold uppercase tracking-wide text-zinc-500">Reusable micro-copy CTAs</h2>
+          <ul class="mt-4 flex flex-wrap gap-2 text-sm text-zinc-700">
+            <li><span class="pill">Ship a Local build</span></li>
+            <li><span class="pill">Schedule a pairing session</span></li>
+            <li><span class="pill">Share your instrumentation</span></li>
+            <li><span class="pill">Invite a security review</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-4xl px-4 pb-24">
+      <div class="space-y-16">
+        <section id="what-this-is" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">What this is</h2>
+          <p class="text-zinc-700">Lakeshore Local is a <strong>hands-on beta</strong> for teams who need Lakeshore-grade delivery but must keep code, data, and artifacts on-premises. We bring our tooling and playbooks into your environment, wire it up with your CI, and stand up a clear surface area for everyone involved.</p>
+        </section>
+
+        <section id="why-it-works" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">Why it works now</h2>
+          <ul class="list-disc space-y-2 pl-5 text-zinc-700">
+            <li><strong>Containerized pipelines</strong> keep builds reproducible across developer laptops, secure sandboxes, and your production edge.</li>
+            <li><strong>Eval harnesses</strong> run inside your perimeter so AI features stay measurable without exposing prompts or data.</li>
+            <li><strong>Instrumented playbooks</strong> are tuned from real client work: fewer regressions, faster approvals, same reliability we ship on hosted projects.</li>
+          </ul>
+        </section>
+
+        <section id="what-you-get" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">What you get <span class="text-sm font-medium text-deep-lake">(Beta = free)</span></h2>
+          <ul class="list-disc space-y-2 pl-5 text-zinc-700">
+            <li>Co-designed build plan covering AI services, web releases, and observability.</li>
+            <li>Local-first CICD templates, infra IaC snippets, and instrumentation dashboards.</li>
+            <li>Weekly pairing windows with Lakeshore engineers during the beta period.</li>
+            <li>Priority invite to production-grade release once Local hits general availability.</li>
+          </ul>
+        </section>
+
+        <section id="what-we-need" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">What we need from you</h2>
+          <ul class="list-disc space-y-2 pl-5 text-zinc-700">
+            <li>A project owner empowered to approve environment changes quickly.</li>
+            <li>Sandbox or staging infrastructure where we can prove the full loop.</li>
+            <li>Agreement to share anonymized performance metrics so we can iterate the beta.</li>
+            <li>Honest feedback—where the tooling feels slow, unclear, or brittle.</li>
+          </ul>
+        </section>
+
+        <section id="how-it-works" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">How the build works</h2>
+          <ol class="list-decimal space-y-3 pl-5 text-zinc-700">
+            <li><strong>Kickoff mapping:</strong> We audit your repo, infrastructure, and compliance guardrails to define scope.</li>
+            <li><strong>Local orchestration:</strong> We provision the build runners and pipelines alongside your current tooling.</li>
+            <li><strong>Proof run:</strong> Together we ship a meaningful feature to validate the instrumentation and QA.</li>
+            <li><strong>Team enablement:</strong> We document the runbooks and train your team so they can operate without us.</li>
+          </ol>
+        </section>
+
+        <section id="timeline" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">Timeline</h2>
+          <div class="grid gap-4 md:grid-cols-3">
+            <div class="card p-5">
+              <div class="pill mb-2">Week 0</div>
+              <h3 class="font-medium">Scoping</h3>
+              <p class="mt-1 text-sm text-zinc-700">Map requirements, confirm access, align on win conditions.</p>
+            </div>
+            <div class="card p-5">
+              <div class="pill mb-2">Weeks 1–4</div>
+              <h3 class="font-medium">Build & prove</h3>
+              <p class="mt-1 text-sm text-zinc-700">Stand up pipelines, ship the first Local release, evaluate.</p>
+            </div>
+            <div class="card p-5">
+              <div class="pill mb-2">Weeks 5–6</div>
+              <h3 class="font-medium">Enable & iterate</h3>
+              <p class="mt-1 text-sm text-zinc-700">Close gaps, extend automations, hand off docs and dashboards.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">Beta pricing</h2>
+          <p class="text-zinc-700">During beta, Lakeshore Local is <strong>free</strong> in exchange for structured feedback and a short shared case study. When we exit beta, pricing will reflect the hosted program: a flat monthly platform fee plus an engagement-based retainer for custom engineering. Beta teams lock in founding rates and direct influence on the roadmap.</p>
+        </section>
+
+        <section id="use-cases" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">Use cases we like</h2>
+          <ul class="list-disc space-y-2 pl-5 text-zinc-700">
+            <li>Regulated teams building AI copilots that must stay inside a private VPC.</li>
+            <li>E-commerce operators with strict merchandising SLAs who need deterministic deploys.</li>
+            <li>Marketing or editorial teams with heavy compliance review that want measurable speed gains.</li>
+            <li>Ops groups automating support workflows while keeping PII locked down.</li>
+          </ul>
+        </section>
+
+        <section id="proof" class="space-y-4">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">Proof & transparency</h2>
+          <p class="text-zinc-700">Local is built on the same rails as our client delivery practice. Expect <strong>shared dashboards</strong> showing deployment frequency, failure rate, and time-to-restore. We run weekly post-launch reviews and publish changelogs so your stakeholders see exactly what shipped and why.</p>
+          <p class="text-zinc-700">We also surface anonymized learnings from other beta partners—what worked, what stalled, and the measurable deltas that unlocked their approvals.</p>
+        </section>
+
+        <section id="faq" class="space-y-6">
+          <h2 class="font-tight text-2xl md:text-3xl tracking-tight">FAQ</h2>
+          <div class="space-y-4">
+            <div class="card p-5 space-y-2">
+              <h3 class="font-medium">Do we need to rip out our existing CI?</h3>
+              <p class="text-sm text-zinc-700">No. We layer on top of your current CI/CD and only replace pieces that are blocking measurable progress. Most teams keep their existing runners and use our templates as reusable jobs.</p>
+            </div>
+            <div class="card p-5 space-y-2">
+              <h3 class="font-medium">Will you handle security reviews?</h3>
+              <p class="text-sm text-zinc-700">We prepare the documentation and pair with your security team. If you need third-party attestation, we coordinate with your vendor so requirements stay on track.</p>
+            </div>
+            <div class="card p-5 space-y-2">
+              <h3 class="font-medium">How long does access last?</h3>
+              <p class="text-sm text-zinc-700">Beta access runs through the enablement phase and includes a 60-day follow-up window. After that, teams can transition into a light retainer or wait for GA licensing.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="join" class="space-y-4">
+          <div class="card p-6 md:p-8 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2 class="font-tight text-2xl tracking-tight">Ready to try Lakeshore Local?</h2>
+              <p class="text-sm text-zinc-700">Tell us about the system you need to ship. We'll send the beta intake checklist.</p>
+            </div>
+            <a class="btn btn-primary" href="mailto:hello@lakeshore.design?subject=Lakeshore%20Local%20beta">Email the team</a>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto max-w-6xl px-4 pb-16">
+    <p class="text-xs text-zinc-500">© Lakeshore. Measured software. Consistent by design.</p>
+  </footer>
+
+  <script>
+    const b = document.getElementById('menuBtn');
+    const n = document.getElementById('mobileNav');
+    b?.addEventListener('click', () => n.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
