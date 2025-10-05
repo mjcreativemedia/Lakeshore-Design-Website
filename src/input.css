@@ -25,4 +25,7 @@
   .pill {
     @apply inline-flex items-center rounded-full border border-hairline bg-white px-3 py-1 text-xs text-zinc-700 font-pill;
   }
+  .pill-beta {
+    @apply inline-flex items-center rounded-full bg-deep-lake/10 text-deep-lake uppercase tracking-wide text-[10px] px-2 py-0.5 border border-transparent;
+  }
 }
